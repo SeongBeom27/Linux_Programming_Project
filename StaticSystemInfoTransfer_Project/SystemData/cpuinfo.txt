@@ -1,0 +1,5 @@
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz
+cpu MHz		: 1800.001
+cpu cores	: 1
