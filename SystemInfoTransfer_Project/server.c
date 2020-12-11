@@ -1,3 +1,6 @@
+/*
+    Variable length packet Server Program
+*/
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <stdio.h>
@@ -8,11 +11,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Systeminfo.h"
-
-void Printblankline(int n)
-{
-    for(int i = 0; i < n; i++) printf("\n");
-}
+#define SIZ 2044
 int main()
 {
     int server_sockfd, client_sockfd;
@@ -26,7 +25,7 @@ int main()
 
     server_address.sin_family = AF_INET;
     server_address.sin_addr.s_addr = htonl(INADDR_ANY);
-    server_address.sin_port = htons(8080);
+    server_address.sin_port = htons(8090);
     server_len = sizeof(server_address);
 
     bind(server_sockfd, (struct sockaddr *)&server_address, server_len);
@@ -71,18 +70,10 @@ int main()
                         printf("removing client on fd %d\n", fd);
                     }
                     else {
-                        recv(fd, (struct systeminfo*)&recvdata, sizeof(recvdata), 0);
+                        recv(fd, (struct systeminfo*)&recvdata, SIZ, 0);
                         printf("---------------------------\n");
-                        Printblankline(2);
-                        printf("Server Get CPU Data\n");
-                        printf("Server : %s", recvdata.cpuinfo);
-                        Printblankline(5);
-                        printf("Server Get Memory Data\n");
-                        printf("Server : %s", recvdata.meminfo);
-                        Printblankline(5);
-                        printf("Server Get Harddisk Data\n");
-                        printf("Server : %s", recvdata.harddiskinfo);
-                        Printblankline(5);
+                        printf("Get Data\n");
+                        printf("%s\n", &recvdata);
                     //    read(fd, &ch, 1);
                         sleep(5);
                         printf("serving client on fd %d\n", fd);
