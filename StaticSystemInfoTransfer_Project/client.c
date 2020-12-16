@@ -35,13 +35,13 @@ int SendData(const struct systeminfo data)
         perror("Server Connect error");
         exit(1);
     }
-    
+
     if(send(sockfd, (struct systeminfo *)&data, sizeof(data), 0) == -1)
     {
         perror("send error");
         return -1;
     }
-    printf("Client : send data %ld\n", sizeof(data));
+    printf("Client : send %ldbyte size data\n", sizeof(data));
     read(sockfd, &recvdata, 10);
     printf("Client : %s\n", recvdata);
     close(sockfd);
@@ -97,8 +97,10 @@ int main()
 
         fseek(fp, 0, SEEK_SET);         // Moving file pointer to start of file
 
+		if(size > 2048)
+			size = 2048;
 
-        /* Buffer Setting */ 
+		/* Buffer Setting */ 
 
         if(ent->d_name[0] == 'c')
         {   
@@ -108,7 +110,11 @@ int main()
         {
             // memory
             ret = fread(mysystem.meminfo, size, 1, fp);
-        } else{
+        } else if(ent->d_name[0] == 'r')
+        {
+            ret = fread(mysystem.recentlyinfo, size, 1, fp);
+        }
+        else{
             // harddisk
             ret = fread(mysystem.harddiskinfo, size, 1, fp);
         }

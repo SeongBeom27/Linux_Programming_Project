@@ -1,0 +1,13 @@
+   396124     20 -rwxrwxr-x   1 baami    baami       17608 Dec 13 02:08 /home/baami/OJT/StaticSystemInfoTransfer_Project/client
+   396200      4 -rwxrwxr-x   1 baami    baami         313 Dec 13 01:26 /home/baami/OJT/StaticSystemInfoTransfer_Project/WriteSystemdata.sh
+   396146      4 -rw-rw-r--   1 baami    baami        3040 Dec 13 02:08 /home/baami/OJT/StaticSystemInfoTransfer_Project/client.c
+   396190      4 -rw-rw-r--   1 baami    baami         125 Dec 13 00:43 /home/baami/OJT/StaticSystemInfoTransfer_Project/Systeminfo.h
+   396166      0 -rw-rw-r--   1 baami    baami           0 Dec 13 17:52 /home/baami/OJT/StaticSystemInfoTransfer_Project/SystemData/recentlyfile.txt
+   396184      4 -rw-rw-r--   1 baami    baami         116 Dec 13 17:52 /home/baami/OJT/StaticSystemInfoTransfer_Project/SystemData/cpuinfo.txt
+   396186      4 -rw-rw-r--   1 baami    baami        1026 Dec 13 17:52 /home/baami/OJT/StaticSystemInfoTransfer_Project/SystemData/harddiskinfo.txt
+   396185      4 -rw-rw-r--   1 baami    baami         899 Dec 13 17:52 /home/baami/OJT/StaticSystemInfoTransfer_Project/SystemData/meminfo.txt
+   396287      0 -rw-rw-r--   1 baami    baami           0 Dec 13 02:00 /home/baami/OJT/StaticSystemInfoTransfer_Project/Makefile
+   396318      4 -rw-rw-r--   1 baami    baami        3113 Dec 13 15:08 /home/baami/OJT/StaticSystemInfoTransfer_Project/server.c
+   396335      8 -rw-rw-r--   1 baami    baami        5072 Dec 13 01:58 /home/baami/OJT/StaticSystemInfoTransfer_Project/Trash/server.o
+   393257     20 -rwxrwxr-x   1 baami    baami       17504 Dec 13 15:00 /home/baami/OJT/StaticSystemInfoTransfer_Project/server
+   393266      4 -rw-rw-r--   1 baami    baami        3690 Dec 13 02:01 /home/baami/OJT/.git/index
